@@ -1,0 +1,63 @@
+<!-- ================== index.html ================== -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>GameZone – Registro / Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- NAVEGACIÓN SIMPLE -->
+  <header>
+    <h1>GameZone</h1>
+    <nav>
+      <button id="btnLoginTab" class="tabBtn active">Iniciar sesión</button>
+      <button id="btnRegTab"   class="tabBtn">Registrarse</button>
+    </nav>
+  </header>
+
+  <!-- LOGIN -->
+  <section id="loginBox" class="card">
+    <h2>Iniciar sesión</h2>
+    <form id="formLogin" autocomplete="off">
+      <input type="email"    id="logEmail"    placeholder="Correo @duoc.cl" required>
+      <input type="password" id="logPassword" placeholder="Contraseña"       required>
+      <button type="submit">Entrar</button>
+      <p id="logError" class="msgError"></p>
+    </form>
+  </section>
+
+  <!-- REGISTRO -->
+  <section id="regBox" class="card hidden">
+    <h2>Crear cuenta</h2>
+    <form id="formReg" autocomplete="off">
+      <input type="text"     id="regNombre"   placeholder="Nombre completo" maxlength="100" required>
+      <input type="email"    id="regEmail"    placeholder="Correo @duoc.cl" required>
+      <input type="password" id="regPass"     placeholder="Contraseña (≥10 caracteres)" required>
+      <input type="password" id="regPass2"    placeholder="Confirmar contraseña" required>
+      <input type="tel"      id="regFono"     placeholder="Teléfono (opcional)">
+      <label>Género favorito</label>
+      <select id="regGenero" required>
+        <option value="">Selecciona uno</option>
+        <option>FICCIÓN</option>
+        <option>NO FICCIÓN</option>
+        <option>MISTERIO</option>
+        <option>TERROR</option>
+        <option>SUSPENSO</option>
+        <option>HISTÓRICO</option>
+        <option>FANTASÍA</option>
+        <option>AVENTURA</option>
+        <option>CIENCIA FICCIÓN</option>
+        <option>BIOGRAFÍA</option>
+        <option>ROMANCE</option>
+      </select>
+      <button type="submit">Registrarse</button>
+      <p id="regError" class="msgError"></p>
+    </form>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
